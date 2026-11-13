@@ -61,14 +61,3 @@ src/
 
 All data comes from TheMealDB, a free and open recipe API. No key is required.
 
-## Deployment
-
-The project is ready to deploy on [Vercel](https://vercel.com):
-
-1. Go to [vercel.com/new](https://vercel.com/new) and import the `Restaurent` repository.
-2. Vercel auto-detects Vite. Keep the defaults (build `npm run build`, output `dist`).
-3. Optionally add `VITE_API_BASE_URL` as an environment variable. The app falls back to
-   `https://www.themealdb.com/api/json/v1/1/` when it is not set.
-4. Deploy.
-
-`vercel.json` adds a SPA rewrite so deep links such as `/meal/52772` work on refresh.
