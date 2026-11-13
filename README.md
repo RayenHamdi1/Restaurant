@@ -1,5 +1,7 @@
 # Restaurant Vue
 
+**Live demo:** https://restaurentmeals.vercel.app
+
 A small recipe browser built with Vue 3, Vue Router, Vuex and Tailwind CSS. It uses
 [TheMealDB](https://www.themealdb.com/) as its data source.
 
