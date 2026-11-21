@@ -1,63 +1,59 @@
-# Restaurant Vue
+# Savor
 
-**Live demo:** https://restaurentmeals.vercel.app
+Savor is a small meal and recipe browser made with Vue 3. It is a front-end project:
+it does not use its own server or database. Recipe information comes from
+[TheMealDB](https://www.themealdb.com/) through a public API.
 
-A small recipe browser built with Vue 3, Vue Router, Vuex and Tailwind CSS. It uses
-[TheMealDB](https://www.themealdb.com/) as its data source.
+## What you can do
 
-## Features
+- Browse random meals on the home page
+- Search for meals by name
+- Browse meals alphabetically
+- Choose an ingredient and see related meals
+- Open a recipe to view ingredients and instructions
+- Watch a linked YouTube video or open the original recipe source
 
-- Search meals by name
-- Browse meals by first letter
-- Browse meals by main ingredient
-- Meal details page with ingredients, instructions and a YouTube link
+## Technologies used
 
-## Tech stack
-
-- Vue 3 (`<script setup>`)
-- Vue Router 4
-- Vuex 4
+- Vue 3
+- Vue Router
 - Axios
 - Tailwind CSS
 - Vite
 
-## Getting started
+## Running locally
+
+Make sure Node.js and npm are installed. Then open the project folder in a terminal:
 
 ```bash
 npm install
-cp .env.example .env   # on Windows: copy .env.example .env
 npm run dev
 ```
 
-The app runs on the Vite dev server (default http://localhost:5173).
+Visit the address printed in the terminal. It is usually `http://localhost:5173`.
 
-## Environment variables
+No API key is needed. The application uses the TheMealDB address defined in
+`src/axiosClient.js`.
 
-| Variable             | Description             | Default                                      |
-| -------------------- | ----------------------- | -------------------------------------------- |
-| `VITE_API_BASE_URL`  | Base URL of TheMealDB   | `https://www.themealdb.com/api/json/v1/1/`   |
+## Production build
 
-## Scripts
-
-| Script          | Description               |
-| --------------- | ------------------------- |
-| `npm run dev`   | Start the dev server      |
-| `npm run build` | Build for production      |
-| `npm run preview` | Preview the build       |
-
-## Project structure
-
+```bash
+npm run build
+npm run preview
 ```
+
+The build is created in the `dist` folder.
+
+## Project files
+
+```text
 src/
-  components/   Layout, navbar and meal related components
-  views/        Home, search, ingredients and meal details pages
-  router/       Route definitions
-  store/        Vuex state, mutations and actions
-  filters/      Shared template filters
-  axiosClient.js
+  components/    Shared layout and meal cards
+  views/         Pages for home, search and recipes
+  router/        Application routes
+  axiosClient.js Axios configuration
+  style.css      Global styles
 ```
 
-## API
-
-All data comes from TheMealDB, a free and open recipe API. No key is required.
-
+The main routes are `/`, `/by-name`, `/by-letter`, `/ingredients`,
+`/by-ingredient/:ingredient`, and `/meal/:id`.
