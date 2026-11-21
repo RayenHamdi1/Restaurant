@@ -1,9 +1,9 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 px-8">
+  <div v-if="meals.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5 sm:px-8">
     <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
   </div>
-  <div v-if="!meals.length" class="flex justify-center text-gray-600 p-8">
-    There are no meals
+  <div v-else class="mx-5 sm:mx-8 rounded-2xl border border-dashed border-stone-300 py-14 text-center text-stone-500">
+    No meals to show yet.
   </div>
 </template>
 
