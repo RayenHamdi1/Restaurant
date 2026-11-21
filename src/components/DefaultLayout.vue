@@ -1,7 +1,7 @@
 <template>
-  <navbar />
-  <main>
-    <div class="max-w-[1200px] mx-auto">
+  <Navbar />
+  <main class="min-h-[calc(100vh-72px)]">
+    <div class="max-w-[1180px] mx-auto pb-12">
       <router-view />
     </div>
   </main>

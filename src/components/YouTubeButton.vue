@@ -2,7 +2,8 @@
   <a
     :href="href"
     target="_blank"
-    class="px-3 py-2 rounded border-2 text-white border-orange-600 bg-orange-500 hover:bg-orange-600 transition-colors"
+    rel="noopener noreferrer"
+    class="rounded-lg border border-[#315c49] px-3 py-2 text-xs font-bold text-[#315c49] transition-colors hover:bg-[#315c49] hover:text-white"
   >
     <slot>YouTube</slot>
   </a>
